@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Mpesa -Android SDK</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo">
+						<a class="navbar-brand" href="index.html">
+							<img class="logo-icon mr-2" src="assets/images/coderdocs-logo.svg" alt="logo">
+							<span class="logo-text">
+								Coder
+								<span class="text-alt">Docs</span>
+							</span>
+						</a>
+					</div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+		            <a href="#" class="btn btn-primary d-none d-lg-flex">Download PDF</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title">
+
+				    	<a class="nav-link scrollto active" href="#section-1">
+				    		<span class="theme-icon-holder mr-2">
+				    			<i class="fas fa-map-signs"></i>
+				    		</span>Introduction
+				    	</a>
+				    </li>
+				    <li class="nav-item">
+				    	<a class="nav-link scrollto" href="#item-1-1">get-started</a>
+				    </li>
+				    <li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-2">
+							<span class="theme-icon-holder mr-2">
+								<i class="fas fa-arrow-down"></i>
+							</span>Installation
+						</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-2-1">Library download</a>
+					</li>
+
+				    <li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-3">
+							<span class="theme-icon-holder mr-2">
+								<i class="fas fa-box"></i>
+							</span> Daraja API
+						</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-3-1">Creating Api Constants</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-3-2">Create Request</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-3-3">STKPush sample</a>
+					</li>
+				    <li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-4">
+							<span class="theme-icon-holder mr-2">
+								<i class="fas fa-cogs"></i>
+							</span>
+							STK Integrations
+						</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-4-1">Creating Api Constants</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-4-2">Create Request</a>
+					</li>
+				    <li class="nav-item">
+						<a class="nav-link scrollto" href="#item-4-3">STKPush sample</a>
+					</li>
+			    </ul>
+
+		    </nav>
+	    </div>
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2019-07-19</span></h1>
+					    <section class="docs-intro">
+						    <p>
+								This is a Android Mpesa wrapper that Makes life easy for developing payment
+								Applications using the public apis that have been provided by safaricom through their <a target="_blank" href="https://developer.safaricom.co.ke/apis">daraja</a>  api portal
+							</p>
+						</section><!--//docs-intro-->
+						<img src="img/app.png" width="400" alt="">
+						<img src="img/stk.png" width="400" alt="">
+						
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">get-started</h2>
+						<p>
+							This is a Android Mpesa Sample app made us this sdk
+						</p>
+					</section>
+					
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+						    <p>
+								First we need to have an existing android project opened in android studio.
+							</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Installation Library</h2>
+						<p>
+							Once u have opened android studio project
+							open the <code class="file">build.gradle (project: Mpesa)</code> 
+							file and add the following   <br>     
+							   <code class="language-markup">
+			                    maven { url "https://jitpack.io" }
+			                  </code>
+			                like this :)
+						</p>
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/jamesnyakush/eaf9c918b126067f4ee59b84da427d80.js"></script>
+						</div>
+
+						<p>
+		                  Now we add our library to our project to our 
+		                  <code class="file">
+			                  build.gradle (module: app)
+		                  </code> 
+			                like this :)
+						</p>
+
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/jamesnyakush/0d9e33ca8222c9266d2ccabf3bb8bdbb.js"></script>
+						</div>
+
+					</section>
+			    </article>
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Daraja APIs</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Section Item 3.1</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Section Item 3.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Section Item 3.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section>
+			    </article>
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">STKPush Intergrations</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section>
+				    </header>
+				     <section class="docs-section" id="item-4-1">
+						<h2 class="section-heading">Creating Api Constants</h2>
+						<p>
+		                  u add ur api constants to the activity or the fragment that u want at the
+		                  top u can also create  a file that will basically en-campus  credentials 
+		                  that we get from <a href="https://developer.safaricom.co.ke/apis">daraja</a>
+		                  portal
+						</p>
+
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/jamesnyakush/92f38da42700722cd92f9bae8ae1f927.js"></script>
+						</div>
+					</section>
+					
+					<section class="docs-section" id="item-4-2">
+						<h2 class="section-heading">Create Request</h2>
+						<p>
+							Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
+						</p>
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/jamesnyakush/59be290b1009d5c3df35ecb27ab32917.js"></script>
+						</div>
+					</section>
+					
+					<section class="docs-section" id="item-4-3">
+						<h2 class="section-heading">Section Item 4.3</h2>
+						<p>
+							Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. 
+						</p>
+
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/jamesnyakush/7136c64f05342aab3599551c75f9bd5c.js"></script>
+						</div>
+
+						<p>
+							Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. 
+						</p>
+
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/jamesnyakush/fc1829b45f6cd1e9b53bbf49cb313849.js"></script>
+						</div>
+					</section>
+			    </article>
+			  
+		    </div> 
+	    </div>
+    </div>
+    
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
