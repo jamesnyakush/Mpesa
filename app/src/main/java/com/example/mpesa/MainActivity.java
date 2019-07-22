@@ -11,7 +11,9 @@ import android.widget.Toast;
 import com.example.mpesasdk.Mpesa;
 import com.example.mpesasdk.in.AuthL;
 import com.example.mpesasdk.in.MpesaL;
+import com.example.mpesasdk.pojo.C2BTransact;
 import com.example.mpesasdk.pojo.STKPush;
+import com.example.mpesasdk.util.Api;
 import com.example.mpesasdk.util.Response;
 
 public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
     public static final String CONSUMER_KEY = "hAVnRxa2UOjyAnydVJMG31A0OuDDCxm5";
     public static final String CONSUMER_SECRET = "UcpmdCdI8bAakdgm";
     public static final String CALLBACK_URL = "https://www.erickogi.co.ke/Mpesaphp/callback.php";
+
+    public static final String Shortcode1 = "600535";
+    public static final String InitiatorNameShortcode1 = "testapi";
+    public static final String SecurityCredentialShortcode1 = "Safaricom535!";
+    public static final String TestMSISDN = "254708374149";
+    private static final String Shortcode2 = "600000";
+
 
 
     Button mPay;
@@ -43,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
             @Override
             public void onClick(View v) {
                 String phone = mPhone.getText().toString();
-                int amount = Integer.valueOf(mAmount.getText().toString());
+                int  amount =  Integer.valueOf(mAmount.getText().toString());
                 if (phone.isEmpty()) {
                     mPhone.setError("Enter phone.");
                     return;
@@ -63,8 +72,20 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
                 CALLBACK_URL);
 
         STKPush push = simulate.build();
-        
         Mpesa.getInstance().pay(this, push);
+
+//            C2BTransact.Simulate simulate = new C2BTransact.Simulate(
+//                    Shortcode1,
+//                    Api.BUYGOODS,
+//                    amount,
+//                    phone,
+//                    "xxxxxxxxxxxxxxxxxxxx"
+//            );
+//            C2BTransact push = simulate.build();
+
+//            Mpesa.getInstance().transact(this, push);
+
+
     }
 
 

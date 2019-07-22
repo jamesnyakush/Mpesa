@@ -52,8 +52,6 @@ public class STKPush {
         private String transactionDesc;
 
         public Simulate(String businessShortCode, String passkey, int amount, String partyA, String partyB, String phoneNumber, String callBackURL) {
-
-
             this.businessShortCode = businessShortCode;
             this.passkey = passkey;
             this.amount = amount;

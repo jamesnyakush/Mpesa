@@ -1,20 +1,12 @@
 package com.example.mpesasdk.pojo;
 
-import com.erickogi14gmail.mpesaapi.NetworkUtills.ApiConstants;
+
 
 public class C2BUrl {
     private String ShortCode;
     private String ResponseType;
     private String ConfirmationURL;
     private String ValidationURL;
-
-    public C2BUrl(String shortCode, String responseType) {
-
-        ShortCode = shortCode;
-        ResponseType = responseType;
-        ConfirmationURL = ApiConstants.callback_url;
-        ValidationURL = ApiConstants.callback_url;
-    }
 
     public C2BUrl(String shortCode, String responseType, String confirmationURL, String validationURL) {
         ShortCode = shortCode;

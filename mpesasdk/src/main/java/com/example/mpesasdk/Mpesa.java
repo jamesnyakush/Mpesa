@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 
 import com.example.mpesasdk.in.AuthL;
 import com.example.mpesasdk.in.MpesaL;
+import com.example.mpesasdk.pojo.C2BTransact;
 import com.example.mpesasdk.pojo.Preferences;
 import com.example.mpesasdk.pojo.STKPush;
 import com.example.mpesasdk.util.Api;
@@ -118,6 +119,32 @@ public class Mpesa {
             e.printStackTrace();
         }
     }
+
+//    public void transact(Context context, C2BTransact c2BTransact) {
+//        if (!(context instanceof AuthL)) {
+//            throw new RuntimeException("Context must implement MpesaListener");
+//        }
+//        if (c2BTransact == null) {
+//            throw new RuntimeException("C2BTransact cannot be null");
+//        }
+//        mpesaListener = (MpesaL) context;
+//        JSONObject postData = new JSONObject();
+//        try {
+//            postData.put("ShortCode", c2BTransact.getShortCode());
+//            postData.put("CommandID", c2BTransact.getCommandID());
+//            postData.put("Amount", c2BTransact.getAmount());
+//            postData.put("Msisdn", c2BTransact.getMsisdn());
+//            postData.put("BillRefNumber", c2BTransact.getBillRefNumber());
+//
+//            String url = Api.BASE_URL + Api.C2B_SIMULATE;
+//
+//            if (mode == Mode.PRODUCTION)
+//                url = Api.PRODUCTION_BASE_URL + Api.PROCESS_REQUEST_URL;
+//            new PayService().execute(url, postData.toString());
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     /*
      *
