@@ -134,11 +134,14 @@ public class Mpesa {
 
         protected void onPostExecute(Response<Integer, String> result) {
             if (result == null) {
-                Mpesa.getInstance().authListener.onAuthError(new Response<>(418, Api.ERROR)); //User is a teapot :(
+                Mpesa.getInstance();
+                authListener.onAuthError(new Response<>(418, Api.ERROR));
+                //User is a teapot :(
                 return;
             }
             if (result.code == 400) {
-                Mpesa.getInstance().authListener.onAuthError(new Response<>(result.code, "Invalid credentials"));
+                Mpesa.getInstance();
+                authListener.onAuthError(new Response<>(result.code, "Invalid credentials"));
                 return;
             }
             try {
@@ -147,16 +150,18 @@ public class Mpesa {
                 if (result.code / 100 != 2) {
                     //Error occurred
                     String message =  jo.get("errorMessage").getAsString();
-                    Mpesa.getInstance().authListener.onAuthError(new Response<>(result.code, message));
+                    Mpesa.getInstance();
+                    authListener.onAuthError(new Response<>(result.code, message));
                     return;
                 }
                 String access_token =  jo.get("access_token").getAsString();
                 Preferences.getInstance().setAccessToken(access_token);
-                Mpesa.getInstance().authListener.onAuthSuccess();
-                return;
+                Mpesa.getInstance();
+                authListener.onAuthSuccess();
             } catch (Exception e) {
                 String message = "Error completing fetching token.Please try again.";
-                Mpesa.getInstance().authListener.onAuthError(new Response<>(result.code, message));
+                Mpesa.getInstance();
+                authListener.onAuthError(new Response<>(result.code, message));
             }
         }
     }
@@ -176,7 +181,8 @@ public class Mpesa {
 
         protected void onPostExecute(Response<Integer, String> result) {
             if (result == null) {
-                Mpesa.getInstance().mpesaListener.onMpesaError(new Response<>(418, Api.ERROR)); //User is a teapot :(
+                Mpesa.getInstance();
+                mpesaListener.onMpesaError(new Response<>(418, Api.ERROR)); //User is a teapot :(
                 return;
             }
             try {
@@ -187,18 +193,21 @@ public class Mpesa {
                     //Error occurred
                     if (jo.has("errorMessage")) {
                         String message =  jo.get("errorMessage").getAsString();
-                        Mpesa.getInstance().mpesaListener.onMpesaError(new Response<>(result.code, message));
+                        Mpesa.getInstance();
+                        mpesaListener.onMpesaError(new Response<>(result.code, message));
                         return;
                     }
                     String message = "Error completing payment.Please try again.";
-                    Mpesa.getInstance().mpesaListener.onMpesaError(new Response<>(result.code, message));
+                    Mpesa.getInstance();
+                    mpesaListener.onMpesaError(new Response<>(result.code, message));
                     return;
                 }
-                Mpesa.getInstance().mpesaListener.onMpesaSuccess(jo.get("MerchantRequestID").toString(), jo.get("CheckoutRequestID").toString(), jo.get("CustomerMessage").toString());
-                return;
+                Mpesa.getInstance();
+                mpesaListener.onMpesaSuccess(jo.get("MerchantRequestID").toString(), jo.get("CheckoutRequestID").toString(), jo.get("CustomerMessage").toString());
             } catch (Exception e) {
                 String message = "Error completing payment.Please try again.";
-                Mpesa.getInstance().mpesaListener.onMpesaError(new Response<>(result.code, message));
+                Mpesa.getInstance();
+                mpesaListener.onMpesaError(new Response<>(result.code, message));
             }
         }
     }

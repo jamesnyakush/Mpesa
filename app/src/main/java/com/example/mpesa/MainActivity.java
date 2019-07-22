@@ -25,16 +25,16 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
 
 
     Button mPay;
-    EditText mPhone,mAmount;
+    EditText mPhone, mAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Mpesa.request(this,CONSUMER_KEY,CONSUMER_SECRET);
+        Mpesa.request(this, CONSUMER_KEY, CONSUMER_SECRET);
 
-        mPhone  = findViewById(R.id.edit_phone);
+        mPhone = findViewById(R.id.edit_phone);
         mAmount = findViewById(R.id.edit_amount);
 
 
@@ -44,17 +44,13 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
             public void onClick(View v) {
                 String phone = mPhone.getText().toString();
                 int amount = Integer.valueOf(mAmount.getText().toString());
-                if (phone.isEmpty()){
+                if (phone.isEmpty()) {
                     mPhone.setError("Enter phone.");
                     return;
                 }
                 pay(phone, amount);
-
             }
         });
-
-
-
     }
 
     private void pay(String phone, int amount) {
@@ -67,9 +63,7 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
                 CALLBACK_URL);
 
         STKPush push = simulate.build();
-
-
-
+        
         Mpesa.getInstance().pay(this, push);
     }
 

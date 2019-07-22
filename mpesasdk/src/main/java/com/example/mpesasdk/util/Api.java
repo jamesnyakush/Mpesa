@@ -9,4 +9,9 @@ public class Api {
 
     public static final String ERROR = "An error occurred while processing the request.Please check your internet connection and try again.";
     public static final String DEFAULT_TRANSACTION_TYPE = "CustomerPayBillOnline";
+
+    public static final String BUYGOODS = "CustomerBuyGoodsOnline";
+    public static final String PAYBILL = "CustomerPayBillOnline";
+
+    public static final String C2B_SIMULATE = "mpesa/c2b/v1/simulate";
 }
