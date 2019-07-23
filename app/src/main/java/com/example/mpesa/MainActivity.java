@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity implements AuthL, MpesaL {
     private static final String TAG = "MainActivity";
 
     public static final String BUSINESS_SHORT_CODE = "174379";
-    public static final String PASSKEY = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
-    public static final String CONSUMER_KEY = "hAVnRxa2UOjyAnydVJMG31A0OuDDCxm5";
-    public static final String CONSUMER_SECRET = "UcpmdCdI8bAakdgm";
-    public static final String CALLBACK_URL = "https://www.erickogi.co.ke/Mpesaphp/callback.php";
+    public static final String PASSKEY = "fdgfgdfgdfgggggggggggggggggggggggggggggggggggggggggggg";
+    public static final String CONSUMER_KEY = "dfgdfg";
+    public static final String CONSUMER_SECRET = "fdg";
+    public static final String CALLBACK_URL = "https://www.site.co.ke/Mpesaphp/callback.php";
 
     public static final String Shortcode1 = "600535";
     public static final String InitiatorNameShortcode1 = "testapi";
